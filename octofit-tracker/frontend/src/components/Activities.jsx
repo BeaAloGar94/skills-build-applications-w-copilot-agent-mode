@@ -6,7 +6,7 @@ function Activities() {
   const [error, setError] = useState('')
 
   useEffect(() => {
-    getCollection('activities').then(setActivities).catch(() => setError('Activities are unavailable right now.'))
+    getCollection('/api/activities/').then(setActivities).catch(() => setError('Activities are unavailable right now.'))
   }, [])
 
   return <DataPage eyebrow="TRAINING LOG" title="Activities" error={error}>
